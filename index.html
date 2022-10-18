@@ -22,39 +22,52 @@
             align-items: center;
             color: #fff;
             text-align: center;
-            font-size: 3rem;
+            font-size: 2.5rem;
             height: 100vh;
             font-family: 'Roboto', monospace, sans-serif;
             font-weight: 700;
             line-height: 5rem;
         }
+
+        p{
+            font-size: 2rem;
+        }
+
+        .aceitar{
+            background: #fff;
+            border-radius: 10px;
+            padding: 2rem 3rem;
+            outline: none;
+            cursor: pointer;
+            font-size: 2rem;
+            font-weight: 700;
+        }
     </style>
     <script>
-        function load() {
+        function loadPass() {
             let senha = prompt("Digite a senha:")
 
-            if(senha.toLowerCase() == "lec"){
+            if(senha.toLowerCase() == "lej"){
                 document.querySelector("body").innerHTML = `FLORESTA DAS BÉTALAS<br>
     15/08 - 15:00<br>
     SOMENTE A EQUIPE
 
     <img src="https://i.pinimg.com/236x/e3/b6/9d/e3b69d903a932a33edc2fe7695fa60da.jpg">`
-            }
-
-            while(senha.toLowerCase() !== "lec"){
-                senha = prompt("Digite a senha:")
-
-                if(senha.toLowerCase() == "lec"){
-                document.querySelector("body").innerHTML = `FLORESTA DAS BÉTALAS<br>
-    15/08 - 15:00<br>
-    SOMENTE A EQUIPE
-
-    <img src="https://i.pinimg.com/236x/e3/b6/9d/e3b69d903a932a33edc2fe7695fa60da.jpg">`
-            }
+            } else {
+                alert("Senha Incorreta")
             }
         }
     </script>
 </head>
-<body onload="load()">
+<body>
+    
+    <h1>Convite</h1>
+    <p>Este convite precisa de senha</p><br>
+
+    • A primeira letra é a inicial daquele que foi livertado <br>
+    • A segunda letra é a inicial do elemento que mais me agrada <br>
+    • A terceira letra é a inicial daquele que tropeça em coisas invisíveis <br><br>
+
+    <button class="aceitar" onclick="loadPass()">Aceitar Convite</button>
 </body>
 </html>
