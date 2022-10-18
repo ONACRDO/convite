@@ -29,12 +29,24 @@
             line-height: 5rem;
         }
     </style>
-</head>
-<body>
-    FLORESTA DAS BÉTALAS<br>
+    <script>
+        function load() {
+            let senha = prompt("Digite a senha:")
+
+            while(senha.toLowerCase() !== "lec"){
+                senha = prompt("Digite a senha:")
+
+                if(senha.toLowerCase() == "lec"){
+                document.querySelector("body").innerHTML = `FLORESTA DAS BÉTALAS<br>
     15/08 - 15:00<br>
     SOMENTE A EQUIPE
 
-    <img src="https://i.pinimg.com/236x/e3/b6/9d/e3b69d903a932a33edc2fe7695fa60da.jpg">
+    <img src="https://i.pinimg.com/236x/e3/b6/9d/e3b69d903a932a33edc2fe7695fa60da.jpg">`
+            }
+            }
+        }
+    </script>
+</head>
+<body onload="load()">
 </body>
 </html>
